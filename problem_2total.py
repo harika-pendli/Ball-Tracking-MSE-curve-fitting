@@ -40,14 +40,6 @@ while (bo== False):
     else:
         print("Type 1 or 2!")
         
-
-    
-    
-
-    
-
-
-
 path_in="C:\\Users\\pendl\\Desktop\\673_hw1\\ball_video1.mp4"
 # Create a VideoCapture object and read from input file
 # If the input is the camera, pass 0 instead of the video file name
@@ -101,23 +93,16 @@ while(cap.isOpened()):
     for i in range(0,np.shape(full_mask)[0]):
         for j in range(0,np.shape(full_mask)[1]):
             if(full_mask[i][j] != 0):
-                coordinates.append((i,j))
-                    
-                        
-                
+                coordinates.append((i,j))            
                     
     x= (coordinates[0][0] + coordinates[-1][0]) /2
     y= (coordinates[0][1] + coordinates[-1][1]) /2
-         
-                    
+               
     datapoints.append((x,y))
-        
-        
-                    
+                       
     dp=np.array(datapoints)
     
-    
-    
+       
     if cv2.waitKey(1) & 0xFF == ord('q'):
       break
 
